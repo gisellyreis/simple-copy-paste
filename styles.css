@@ -1,0 +1,78 @@
+* {
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing: border-box;
+}
+
+.form {
+    margin: 30px;
+    margin-top: 8%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume, .btn-group {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+}
+
+input, button {
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    padding: 12px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+.dif-input {
+    background-color: #dfdbdb;
+    color: #000;
+    width: 500px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pay-input {
+    margin: 12px;
+}
+
+textarea {
+    margin-top: 15px;
+    width: 500px;
+    height: 240px;
+    padding: 12px;
+
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    margin: 12px;
+    margin-bottom: 48px;
+    background-color: #1bb635;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #010d1f;
+    transition: 0.3s;
+}
