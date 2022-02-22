@@ -5,8 +5,13 @@
 }
 
 .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
     border: 1px solid #000;
     border-radius: 8px;
+    width: 100%;
 
     margin: 4%;
 }
@@ -26,22 +31,22 @@ h1 {
     align-items: center;
     text-align: center;
 
-    margin-left: 30%;
-    width: 400px;
+    max-width: 800px;
     font-weight: bold;
 }
 
 img {
     width: 150px;
     height: 150px;
-
+    margin-left: -10%;
 }
 
 .form {
-    margin-top: 2%;
     display: grid;
     justify-content: center;
     align-items: center;
+
+    margin-top: 2%;
 }
 
 .resume, .btn-group {
@@ -69,7 +74,8 @@ input[type=checkbox] {
 .dif-input {
     background-color: #dfdbdb !important;
     color: #000;
-    width: 600px;
+    width: 500px;
+    padding: 12px;
 
     display: flex;
     justify-content: flex-end;
