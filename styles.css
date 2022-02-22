@@ -4,9 +4,41 @@
     box-sizing: border-box;
 }
 
+.container {
+    border: 1px solid #000;
+    border-radius: 8px;
+
+    margin: 4%;
+}
+
+.title {
+    display: grid;
+    width: 60%;
+    grid-template-columns: 1fr 50px;
+
+    margin-top: 6%;
+    margin-left: 4%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-left: 30%;
+    width: 400px;
+    font-weight: bold;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+
+}
+
 .form {
-    margin: 30px;
-    margin-top: 8%;
+    margin-top: 2%;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -37,7 +69,7 @@ input[type=checkbox] {
 .dif-input {
     background-color: #dfdbdb !important;
     color: #000;
-    width: 500px;
+    width: 600px;
 
     display: flex;
     justify-content: flex-end;
@@ -61,6 +93,11 @@ textarea {
 
 .dif-input:focus {
     outline: none;
+}
+
+.payment {
+    display: grid;
+    row-gap: 10px;
 }
 
 button {

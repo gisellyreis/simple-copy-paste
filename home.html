@@ -11,18 +11,23 @@
     <title>Copiar Dados de Entregas</title>
 </head>
 <body>
-    <div class="form">
-        <div class="mb-3">
-            <label >Nome: </label>
-            <input class="dif-input" type="text" name="name" id="name" placeholder="Nome do cliente" />
+    <div class="container">
+        <div class="title">
+            <h1>GERENCIADOR DE PEDIDOS IFOOD</h1>
+            <img src="/logo.png" alt="logo">
         </div>
-        <div class="mb-3">
-            <label >#Pedido: </label>
-            <input class="dif-input" type="number" name="order" id="order" placeholder="0000" />
-        </div>
-        <div class="mb-3">
-            <label >Endereço: </label>
-            <input class="dif-input" type="text" name="address" id="address" placeholder="Digite o endereço" />
+        <div class="form">
+            <div class="mb-3">
+                <label >Nome: </label>
+                <input class="dif-input" type="text" name="name" id="name" placeholder="Nome do cliente" />
+            </div>
+            <div class="mb-3">
+                <label >#Pedido: </label>
+                <input class="dif-input" type="number" name="order" id="order" placeholder="0000" />
+            </div>
+            <div class="mb-3">
+                <label >Endereço: </label>
+                <input class="dif-input" type="text" name="address" id="address" placeholder="Digite o endereço" />
         </div>
         <div class="mb-3">
             <label >Qunato Cobrar: </label>
@@ -33,6 +38,18 @@
             <div class="checkbox">
                 <input class="pay-input" type="checkbox" name="pago" id="pago" /><label for="">Já pago</label>
                 <input class="pay-input" type="checkbox" name="maquina" id="maquina" /><label for="">Maquineta</label>
+                <input onclick="showTroco()" class="pay-input" type="checkbox" name="dinheiro" id="dinheiro" /><label for="">Dinheiro</label>
+            </div>
+            <div hidden="true" id="troco">
+                <label >Troco:</label>
+                <div class="checkbox">
+                    <input onclick="showChange()" class="pay-input" type="checkbox" name="sim" id="sim" /><label for="">Sim</label>
+                    <input class="pay-input" type="checkbox" name="nao" id="nao" /><label for="">Não</label>
+                </div>
+                <div hidden="true" id="change_div">
+                    <label >VALOR DO TROCO:</label>
+                    <input class="dif-input" type="text" name="change" id="change" placeholder="R$" />
+                </div>
             </div>
         </div>
         <div class="mb-3">
@@ -50,5 +67,6 @@
         <button onclick="colarTexto()">GERAR TEXTO</button>
         <button onclick="copiarTexto()">COPIAR TEXTO</button>
     </div>
+</div>
 </body>
 </html>

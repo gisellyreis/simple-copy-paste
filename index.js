@@ -1,3 +1,13 @@
+function showChange() {
+    let change_div = document.getElementById("change_div");
+    change_div.hidden = !change_div.hidden;
+}
+
+function showTroco() {
+    let troco = document.getElementById("troco");
+    troco.hidden = !troco.hidden;
+}
+
 function colarTexto() {    
     let name = document.getElementById("name");
     let order = document.getElementById("order");
@@ -6,11 +16,23 @@ function colarTexto() {
     let link = document.getElementById("link");
 
     let pago = document.getElementById("pago");
+    let dinheiro = document.getElementById("dinheiro");
     let maquina = document.getElementById("maquina");
 
     let formaPagamento = "";
+    let change = 0.0;
     if (pago.checked) {
         formaPagamento = "JÁ PAGO, NÃO COBRAR DO CLIENTE";
+    }
+    else if (dinheiro.checked) {
+        let sim = document.getElementById("sim");
+        if(sim.checked){
+            change = document.getElementById("change");
+            formaPagamento = `DINHEIRO , LEVAR TROCO DE R$ ${change.value}`;
+        }
+        else {
+            formaPagamento = "DINHEIRO , SEM TROCO";
+        }
     }
     else {
         formaPagamento = "LEVAR MAQUINETA";
